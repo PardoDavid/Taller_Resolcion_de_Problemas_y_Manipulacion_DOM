@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+  --azulclaro: #48D6ED;
+  --azuloscuro: #337AB7;
+  --azulnegro: #303342;
+  --negro: #333333;
+  --negro2: #000;
+  --gris: #B2B3B3;
+  --fondo: #FFFEFC;
+  --verdeazul: #157A8A;
+  --Magenta: #9C2759;
+  --blanco: #fff;
+  --degradado: linear-gradient(49.54deg, #337AB7 2.89%, #0B3860 80.34%);
+}
+ 
+*{
+    margin:0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;    
+}
+ 
+  h1,h2,h3,h4,h5{
+    font-family: 'Marcellus', serif;
+}
+@media screen and (min-width: 320px) and (max-width:1023px){
+    body{
+        background:url(https://www.smartick.es/blog/wp-content/uploads/2021/02/above-view-colorful-letters-frame-2048x1153.jpg);
+    }
+    .caja{        
+        height: 695px;
+        display: flex;
+        justify-content: center;    
+    }
+    .form{    
+        text-align: center;
+        background: #1A2980;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #26D0CE, #283681);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #26D0CE, #2d3d9b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        border-radius: 20px;
+        width: 85%;
+        height: 33rem;
+        margin-top: 5rem;   
+        
+    }
+    p{
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+    }
+    #texto{
+        width: 55%;
+        height: 40px;
+        font-size: 25px;
+    }
+    #enviar{
+        width: 50%;
+        height: 40px;
+        font-size: 15px;
+    }
+    #enviar2{
+        width: 50%;
+        height: 40px;
+        font-size: 15px;
+    }
+    #enviar3{
+        width: 50%;
+        height: 40px;
+        font-size: 15px;
+    }
+    #enviar4{
+        width: 50%;
+        height: 40px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width:1024px ){
+/*/Ejercicio 1/*/
+
+.caja{
+   
+    background:url(https://www.smartick.es/blog/wp-content/uploads/2021/02/above-view-colorful-letters-frame-2048x1153.jpg);
+    height: 918px;
+    display: flex;
+    justify-content: center;    
+}
+.form{    
+    text-align: center;
+    background: #1A2980;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #26D0CE, #283681);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #26D0CE, #2d3d9b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 20px;
+    width: 45%;
+    height: 33rem;
+    margin-top: 5rem;       
+}
+p{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+#texto{
+    width: 55%;
+    height: 40px;
+}
+#enviar{
+    width: 40%;
+    height: 60px;
+    font-size: 25px;
+}
+#enviar2{
+    width: 40%;
+    height: 40px;
+    font-size: 25px;
+}
+#enviar3{
+    width: 40%;
+    height: 40px;
+    font-size: 23px;
+}
+#enviar4{
+    width: 40%;
+    height: 40px;
+    font-size: 25px;
+}
+}
+
+
