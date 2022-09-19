@@ -76,17 +76,16 @@ body{
         padding: 0.5rem;
         font-family: 'Marcellus', serif;
         color: var(--blanco);
+    }    
+    .tit{
+        font-size: 50px;
     }
-    /*MENU HAMBURGUESA*/
-
-    .open {
-        transform: translateY(-100em);
-    }
-
-    .outside {
-        transform: translateX(0);
-    }
-     /*MENU HAMBURGUESA*/
+     body{
+        background: #FDC830;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
+    }   
 }
         
 
@@ -121,6 +120,15 @@ nav{
 .navbar-button{
     background-color:var(--azuloscuro);
 }    
+.tit{
+    font-size: 70px;
+}
+body{
+    background: #FDC830;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
 
 
 

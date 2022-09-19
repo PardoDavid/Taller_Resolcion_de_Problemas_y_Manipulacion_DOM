@@ -75,6 +75,16 @@ body{
         height: 40px;
         font-size: 15px;
     }
+    /*MENU HAMBURGUESA*/
+
+   .open {
+    transform: translateY(-100em);
+    }
+
+    .outside {
+    transform: translateX(0);
+    }
+    /*MENU HAMBURGUESA*/
 }
 
 @media screen and (min-width:1024px ){

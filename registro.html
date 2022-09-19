@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/estilos.css">
     <link rel="stylesheet" href="CSS/ejercicio6.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6131ecdde6.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
@@ -32,11 +33,13 @@
     </div>
 </nav>
 <div class="cont">
-<form action="index.html" class="form" id="form" checked>    
-    <div class="formulario__grupo" id="grupo__tdocumento">
+<form action="index.html" class="form" id="form">    
+
+    <div class="formulario__grupo" id="grupo__tdocumento" required="">
         <label for="usuario" class="formulario__label">Tipo de Documento</label>
         <div class="formulario__grupo-input">
-            <select class="formulario_input" name="tipodoc" id="tipodoc">       
+            <select class="formulario_input" name="tdocumento" id="tdocumento">    
+                <option value="o" disabled="disabled">Seleccione..</option>   
                 <option value="g">CC</option>
                 <option value="f">TI</option>
                 <option value="k">Otro</option>
@@ -49,16 +52,16 @@
     <div class="formulario__grupo" id="grupo__documento">
         <label for="usuario" class="formulario__label">No. Documento</label>
         <div class="formulario__grupo-input">
-            <input type="text" class="formulario__input" name="documento" id="documento" placeholder="john123">
+            <input type="text" class="formulario__input" name="documento" id="documento" placeholder="">
             <i class="formulario__validacion-estado fas fa-times-circle"></i>
         </div>
-        <p class="formulario__input-error">El documento tiene que ser de 7 a 10 dígitos y solo puede contener numeros.</p>
+        <p class="formulario__input-error">El documento tiene que ser de 5 a 10 dígitos y solo puede contener numeros.</p>
     </div>
 
     <div class="formulario__grupo" id="grupo__nombre">
         <label for="nombre" class="formulario__label">Nombre</label>
         <div class="formulario__grupo-input">
-            <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="John Doe">
+            <input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="">
             <i class="formulario__validacion-estado fas fa-times-circle"></i>
         </div>
         <p class="formulario__input-error">El nombre tiene que ser de 3 a 30 dígitos y solo puede contener letras</p>
@@ -67,7 +70,7 @@
     <div class="formulario__grupo" id="grupo__apellido">
         <label for="nombre" class="formulario__label">Apellido</label>
         <div class="formulario__grupo-input">
-            <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="John Doe">
+            <input type="text" class="formulario__input" name="apellido" id="apellido" placeholder="">
             <i class="formulario__validacion-estado fas fa-times-circle"></i>
         </div>
         <p class="formulario__input-error">El apellido tiene que ser de 3 a 30 dígitos y solo puede contener letras</p>
@@ -79,13 +82,13 @@
             <input type="date" class="formulario__input" name="nacimiento" id="nacimiento" placeholder="">
             <i class="formulario__validacion-estado fas fa-times-circle"></i>
         </div>
-        <p class="formulario__input-error">El campo es obligatorio</p>
+        <p class="formulario__input-error">La fecha debe ser igual o inferior a 2002</p>
     </div>
 
     <div class="formulario__grupo" id="grupo__correo">
         <label for="correo" class="formulario__label">Correo Electrónico</label>
         <div class="formulario__grupo-input">
-            <input type="email" class="formulario__input" name="correo" id="correo" placeholder="correo@correo.com">
+            <input type="email" class="formulario__input" name="correo" id="correo" placeholder="">
             <i class="formulario__validacion-estado fas fa-times-circle"></i>
         </div>
         <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
@@ -111,29 +114,37 @@
 </div>
 <div class="formulario__grupo" id="grupo__terminos">
     <label class="formulario__label">
-        <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" data-toggle="modal" data-target="#exampleModalAreaTri">
+        <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos" data-toggle="modal" data-target="#Terminos">
         Acepto los Terminos y Condiciones
     </label>
 </div>
-<div class="modal fade" id="exampleModalAreaTri" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="Terminos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+          <h5 class="modal-title" id="exampleModalLongTitle">Terminos y Condiciones</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
-            <input type="number" id="area1">
-            <br><br>
-            <input type="number" id="area2">
-            <br><br>
-            <button id="areat">ENVIAR</button>
-            <br><br>
+            <p>Estos Terminos de Servicio reflejan la forma<br>
+                de trabajar de Google como empresa, las<br>
+                leyes por las que nos regimos y determinados<br>
+                aspectos que siempre hemos creído que son<br>
+                ciertos. Por ello, estos Términos de Servicio<br>
+                ayudan a definir la relación que tiene Google<br>
+                contigo cuando interactúas con nuestros<br>
+                servicios. Por ejemplo, estos términos<br>
+                incluyen las siguientes secciones:<br><br>
+                Qué pueden esperar de nosotros, donde se<br>
+                describe cómo proporcionamos y<br>
+                desarrollamos nuestros servicios.<br>
+                Lo que esperamos de ti, donde se establecen<br>
+                ciertas reglas para utilizar nuestros servicios.</p>            
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
         </div>
       </div>
     </div>
@@ -149,5 +160,9 @@
 </div>
 <script src="JS/ejercicio6.js"></script>
 <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+  crossorigin="anonymous"></script>
+<script src="./JS/index.js"></script>
 </body>
 </html>

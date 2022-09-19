@@ -3,15 +3,18 @@ const inputs = document.querySelectorAll('#form input');
 
 const expresiones = {
 	//usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
-    documento: /^\d{7,10}$/, // 7 a 10 numeros.
+	//tdocumento: 
+    documento: /^\d{5,10}$/, // 5 a 10 numeros.
 	nombre: /^[a-zA-ZÀ-ÿ\s]{2,30}$/, // Letras y espacios, pueden llevar acentos.
+	nacimiento: /^((19|[0-9])[0-9]{2}|(20|[0-9])[0-2]{2})-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])$/,
     apellido: /^[a-zA-ZÀ-ÿ\s]{2,30}$/, // Letras y espacios, pueden llevar acentos.
 	password: /^.{4,12}$/, // 4 a 12 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 	
 }
 
-const campos = {    	
+const campos = {   
+	
     documento: false,
 	nombre: false,
     apellido: false,
@@ -21,7 +24,7 @@ const campos = {
 	
 }
 const validarFormulario = (e) => {
-	switch (e.target.name) {
+	switch (e.target.name) {			
 		case "documento":
 			validarCampo(expresiones.documento, e.target, 'documento');
 		break;
@@ -92,7 +95,7 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const terminos = document.getElementById('terminos');
-	if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
+	if(campos.documento && campos.nombre && campos.apellido && campos.nacimiento && campos.password && campos.correo && terminos.checked ){
 		formulario.reset();
 
 		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');

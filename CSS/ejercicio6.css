@@ -25,113 +25,214 @@ body{
   h1,h2,h3,h4,h5{
     font-family: 'Marcellus', serif;
 }
+
 @media screen and (min-width: 320px)  and (max-width:1023px){
     body{
-        background:url(https://img.freepik.com/foto-gratis/desenfoque-lujo-abstracto-gradiente-color-gris-utilizado-como-pared-estudio-fondo-exhibir-sus-productos_1258-52725.jpg?w=2000);
+        background:url(https://www.cotopaxi.com.ec/sites/default/files/2020-08/Gris_0.png);
         }
         .cont{
             display: flex;
             justify-content: center;   
             margin: 1rem; 
         }
-        .caja4{    
-            text-align: center;
+        .form{        
+            max-width: 800px;
+            width: 90%;
+            margin: auto;
+            padding: 40px;
+            border-radius: 5%;
             background: #000000;  /* fallback for old browsers */
             background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #434343, #7a7a7a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-            border-radius: 20px;
-            width: 75%;
-            height: 26rem;
-            margin-top: 2rem;       
-            padding: 2rem;
+            background: linear-gradient(to right, #5c5c5c, #3b3b3b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }        
+        .formulario_label{
+            display: block;
+            font-weight: 700;
+            padding: 10px;
+            cursor: pointer;
+        }       
+        .formulario__grupo-input {
+            position: relative;
+        }
+        .formulario__input-error{
+            font-size: 12px;
+        } 
+        input{
+            width: 100%;
+            background: #fff;
+            border: 3px solid transparent;
+            border-radius: 3px;
+            height: 45px;
+            line-height: 45px;
+            padding: 0 40px 0 10px;
+            transition: .3s ease all;
+        }
+        select{
+            width: 100%;
+            background: #fff;
+            border: 3px solid transparent;
+            border-radius: 3px;
+            height: 45px;
+            line-height: 45px;
+            padding: 0 40px 0 10px;
+            transition: .3s ease all;
+        }
+        .formulario__input:focus {
+            border: 3px solid #0075FF;
+            outline: none;
+            box-shadow: 3px 0px 30px rgba(163,163,163, 0.4);
+        }
+        .formulario__input-error {
+            font-size: 12px;
+            margin-bottom: 0;
+            display: none;
         }
         
-        p{
-            font-size: 22px;
-            font-weight: bold;
-            color: black;
+        .formulario__input-error-activo {
+            display: block;
+        }
+        .formulario__validacion-estado {
+            position: absolute;
+            right: 10px;
+            bottom: 15px;
+            z-index: 100;
+            font-size: 16px;
+            opacity: 0;
+        }
+        .formulario__checkbox {
+            margin-right: 10px;
         }
         
-        #listan{
-            width: 95%;
-            height: 40px;
-            font-size: 20px;
-        }
-        #listap{
-            width: 95%;
-            height: 40px;
-            font-size: 20px;
-        }
-        #listam{
-            width: 95%;
-            height: 40px;
-            font-size: 20px;
+        .formulario__grupo-terminos, 
+        .formulario__mensaje,
+        .formulario__grupo-btn-enviar {
+            grid-column:1;
         }
         #enviar{
             height: 40px;
-            width: 90%;
+            width: 100%;
             font-size: 20px;
+        }
+        
+        .formulario__mensaje {
+            height: 45px;
+            line-height: 45px;
+            background: #F66060;
+            padding: 0 15px;
+            border-radius: 3px;
+            display: none;
+        }
+        
+        .formulario__mensaje-activo {
+            display: block;
+        }
+        
+        .formulario__mensaje p {
+            margin: 0;
+        }
+        .formulario__mensaje-exito {
+            font-size: 14px;
+            color: #119200;
+            display: none;
+        }
+        
+        .formulario__mensaje-exito-activo {
+            display: block;
+        }
+        /* ----- -----  Estilos para Validacion ----- ----- */
+        .formulario__grupo-correcto .formulario__validacion-estado {
+            color: #1ed12d;
+            opacity: 1;
+        }
+        
+        .formulario__grupo-incorrecto .formulario__label {
+            color: #bb2929;
+        }
+        
+        .formulario__grupo-incorrecto .formulario__validacion-estado {
+            color: #bb2929;
+            opacity: 1;
+        }
+        
+        .formulario__grupo-incorrecto .formulario__input {
+            border: 3px solid #bb2929;
         }
 }
 
 @media screen and (min-width:1024px ){
 /*/Ejercicio 1/*/
 body{
-background:url(https://img.freepik.com/foto-gratis/desenfoque-lujo-abstracto-gradiente-color-gris-utilizado-como-pared-estudio-fondo-exhibir-sus-productos_1258-52725.jpg?w=2000);
+background:url(https://www.cotopaxi.com.ec/sites/default/files/2020-08/Gris_0.png);
 }
 .cont{
     display: flex;
     justify-content: center;    
+    margin-top: 4rem;
 }
-.form{    
-    text-align: left;
+.form{        
+    max-width: 800px;
+	width: 90%;
+	margin: auto;
+	padding: 40px;
+    border-radius: 5%;
     background: #000000;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #434343, #7a7a7a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-    border-radius: 20px;
-    width: 25%;
-    height: 40rem;
-    margin-top: 5rem;       
-    padding: 4rem;
+    background: linear-gradient(to right, #5c5c5c, #3b3b3b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
 }
-
 .formulario_label{
-    font-size: 32px;
-    font-weight: bold;
-    color: black;
+    display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
 }
 .formulario__grupo-input {
 	position: relative;
 }
 .formulario__input-error{
     font-size: 12px;
+    color: #000;
+    font-weight: bold;
 }
 
 input{
-    width: 95%;
-    height: 25px;
-    font-size: 20px;
+    width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+select{
+    width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
 }
 #tipodoc{
     width: 95%;
     height: 35px;
     font-size: 20px;
 }
-#listap{
-    width: 45%;
-    height: 50px;
-    font-size: 20px;
+.formulario__grupo-btn-enviar {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
-#listam{
-    width: 45%;
-    height: 50px;
-    font-size: 20px;
-}
-#enviar{
-    height: 40px;
-    width: 25%;
-    font-size: 20px;
-}
+
+
+
 .formulario__input:focus {
 	border: 3px solid #0075FF;
 	outline: none;
@@ -153,9 +254,6 @@ input{
 	z-index: 100;
 	font-size: 16px;
 	opacity: 0;
-}
-.formulario__checkbox {
-	margin-right: 10px;
 }
 .formulario__checkbox {
 	margin-right: 10px;
@@ -211,3 +309,4 @@ input{
 	border: 3px solid #bb2929;
 }
 }
+

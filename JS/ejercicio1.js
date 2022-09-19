@@ -1,45 +1,35 @@
 const calcular=document.getElementById('enviar');
 calcular.addEventListener('click', ()=>
 {
-    let nombre = document.getElementById('texto').value
-    
-    function calcular(nombre){
-        let cantidad=nombre.length
-        alert("su nombre tiene "+cantidad+ " letras")
-    }
-    calcular(nombre)
+    let nombre1 = document.getElementById('texto').value
+       
+        let cantidad=nombre1.length
+        alert("su nombre tiene "+cantidad+ " letras")    
+
 })
 
 const calcular2=document.getElementById('enviar2');
-calcular.addEventListener('click', ()=>
+calcular2.addEventListener('click', ()=>
 {
-    let nombre = document.getElementById('texto').value    
-    function calcular(nombre){
-        let cantidad=nombre.toLowerCase()
+    let nombre2 = document.getElementById('texto').value    
+   
+        let cantidad=nombre2.toLowerCase()
         alert("su palabra en minuscula "+cantidad)
-    }
-    calcular(nombre)
 })
 
 const calcular3=document.getElementById('enviar3');
-calcular.addEventListener('click', ()=>
+calcular3.addEventListener('click', ()=>
 {
-    let nombre = document.getElementById('texto').value  
-    function calcular(nombre){
-      let cantidad=nombre.toUpperCase()
+    let nombre3 = document.getElementById('texto').value     
+      let cantidad=nombre3.toUpperCase()
       alert("su palabra en minuscula "+cantidad)
-  }
-  calcular(nombre)
 })
 
 const calcular4=document.getElementById('enviar4');
-calcular.addEventListener('click', ()=>
+calcular4.addEventListener('click', ()=>
 {
-    let nombre = document.getElementById('texto').value  
-    function calcular(nombre){
-        let cantidad=nombre.charAt(0)
-        alert("su palabra en minuscula "+cantidad)
-    }
-    calcular(nombre)
+    let nombre4 = document.getElementById('texto').value     
+        let cantidad=nombre4.charAt(0)
+        alert("su palabra en minuscula "+cantidad)   
 })
 
